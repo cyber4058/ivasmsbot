@@ -1,9 +1,21 @@
-python-telegram-bot==20.7
+# Telegram Bot
+python-telegram-bot==22.4
+
+# HTTP Requests
 requests==2.31.0
-beautifulsoup4==4.12.2
+
+# HTML Parsing
+beautifulsoup4==4.13.5
 lxml==4.9.3
-asyncio
 
+# Environment Variables
+python-dotenv==1.0.1
 
-python-dotenv
+# Web Server
+Flask==3.0.3
 
+# Web Automation (jika script pakai Selenium untuk login IVASMS)
+selenium==4.25.0
+
+# Chrome Driver Manager (untuk otomatisasi Chromium di Railway/Docker)
+webdriver-manager==4.0.2
