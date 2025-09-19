@@ -120,12 +120,11 @@ if __name__ == "__main__":
     import asyncio
     from threading import Thread
 
-    # Jalankan loop scraping di thread terpisah
     def run_scraper():
+        print("🚀 Starting main_loop()")
         asyncio.run(main_loop())
 
     Thread(target=run_scraper, daemon=True).start()
 
-    # Jalankan Flask server agar Railway tetap hidup
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
