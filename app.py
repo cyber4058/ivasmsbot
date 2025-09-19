@@ -176,10 +176,11 @@ async def main_loop():
             await send_telegram_message(otp_message)
         time.sleep(30) # Check every 30 seconds
 
+import os
+
 if __name__ == "__main__":
-    import asyncio
-    
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8080))  # pakai PORT dari Railway
     app.run(host="0.0.0.0", port=port)
+
 
 
